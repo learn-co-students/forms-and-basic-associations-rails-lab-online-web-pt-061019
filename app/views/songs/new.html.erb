@@ -5,7 +5,22 @@
   <%= f.text_field :title %>
   <br />
 
+  <%= f.label :artist %>
+  <%= f.text_field :artist %>
+  <br />
+  <%= f.label :genre %>
+  <select name="genre">
+    <% @genres.each do |genre| %>
+      <option value="<%= genre.name %>"><%= genre.name %></option>
+    <% end %>
+
+  </select>
+  <br />
+  <%= f.label :notes %>
+  <%= f.text_field :notes %>
+  <br />
+
+  <br />
+
   <%= f.submit %>
 <% end %>
-
-
