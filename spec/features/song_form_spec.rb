@@ -32,7 +32,7 @@ describe "the song form", :type => :feature do
     visit '/songs/new'
     fill_in :song_title, with: 'Little Earthquakes'
     fill_in :song_notes_1, with: 'great piano'
-    fill_in :song_notes_1, with: 'inaccurate seismology'
+    fill_in :song_notes_2, with: 'inaccurate seismology'
     find('input[name="commit"]').click
     expect(Song.last.notes.map(&:content)).to eq ['great piano', 'inaccurate seismology']
   end
