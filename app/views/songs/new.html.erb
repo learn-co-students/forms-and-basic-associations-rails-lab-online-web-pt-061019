@@ -11,9 +11,10 @@
   <%= f.collection_select :genre_id, Genre.all, :name, :name %>
   
   <!-- <%= f.label :note_contents %> -->
-  <input name="song[note_contents][]" id="song_notes_1">
-  <input name="song[note_contents][]" id="song_notes_2">
-  <input name="song[note_contents][]" id="song_notes_3">
+  <%= f.fields_for :notes, 2.times{@song.notes.build} do |nf| %>
+    <%= nf.label :content %>
+    <%= nf.text_area :content %>
+  <% end %>
 
   <%= f.submit %>
 <% end %>
