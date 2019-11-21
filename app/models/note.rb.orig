@@ -1,0 +1,7 @@
+class Note < ActiveRecord::Base
+<<<<<<< HEAD
+  belongs_to :song
+=======
+  belongs_to :song  
+>>>>>>> b861db35d856944c27349742b7540bd617253575
+end

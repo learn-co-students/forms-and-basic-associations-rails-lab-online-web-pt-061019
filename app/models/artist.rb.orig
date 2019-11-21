@@ -1,0 +1,7 @@
+class Artist < ActiveRecord::Base
+  has_many :songs
+<<<<<<< HEAD
+=======
+  has_many :genres, through: :songs
+>>>>>>> b861db35d856944c27349742b7540bd617253575
+end
